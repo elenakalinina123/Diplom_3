@@ -1,17 +1,16 @@
-import time
-
 import allure
 
-from ..locators import index_locators, login_locators
+from ..data import urls
+from ..locators import login_locators
 from .base_page import BasePage
 
 
 class LoginPage(BasePage):
-    page_link = login_locators.url
+    page_link = urls.login_url
 
     @allure.step('Кликаем по кнопке личный кабинет')
     def click_profile(self):
-        self.wait_until_url_matches(index_locators.url)
+        self.wait_until_url_matches(urls.base_url)
         button = self.wait_until_visibility(login_locators.profile_button)
         button.click()
 

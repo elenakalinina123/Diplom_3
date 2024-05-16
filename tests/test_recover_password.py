@@ -1,3 +1,4 @@
+from ..data.data import test_email
 from ..pages.forgot_password_page import ForgotPasswordPage
 from ..pages.login_page import LoginPage
 
@@ -11,9 +12,9 @@ class TestRecoverPassword:
         login_page.click_recover()
         assert forgot_page.is_loaded()
 
-    def test_enter_email(self, driver, fixed_email):
+    def test_enter_email(self, driver):
         forgot_page = ForgotPasswordPage(driver)
-        forgot_page.input_email(fixed_email)
+        forgot_page.input_email(test_email)
         forgot_page.click_recover()
         assert forgot_page.is_url_reset_password()
 

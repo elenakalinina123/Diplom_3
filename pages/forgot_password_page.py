@@ -1,11 +1,12 @@
 import allure
 
+from ..data import urls
 from ..locators import forgot_password_locators
 from .base_page import BasePage
 
 
 class ForgotPasswordPage(BasePage):
-    page_link = forgot_password_locators.url
+    page_link = urls.forgot_password_url
 
     @allure.step('Заполняем поля емейла')
     def input_email(self, email):
@@ -34,6 +35,6 @@ class ForgotPasswordPage(BasePage):
 
     @allure.step('Проверяем что адрес совпадает с нужным')
     def is_url_reset_password(self):
-        expected_url_string = forgot_password_locators.reset_password_url
+        expected_url_string = 'reset-password'
         self.wait_until_url_contains(expected_url_string)
         return expected_url_string in self.get_current_url()

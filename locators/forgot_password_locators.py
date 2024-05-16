@@ -1,7 +1,5 @@
 from selenium.webdriver.common.by import By
 
-url = "https://stellarburgers.nomoreparties.site/forgot-password"
-
 email_field = (By.XPATH, './/fieldset/div/div/input')
 recover_button = (By.XPATH, './/form/button')
 show_password_button = (
