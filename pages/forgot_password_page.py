@@ -16,15 +16,11 @@ class ForgotPasswordPage(BasePage):
 
     @allure.step('Кликаем кнопку восстановить пароль')
     def click_recover(self):
-        self.find_element(forgot_password_locators.recover_button).click()
+        self.click(forgot_password_locators.recover_button)
 
     @allure.step('Кликаем кнопку показать пароль')
     def click_show_password(self):
-        button = self.find_element(
-            forgot_password_locators.show_password_button)
-        button.click()
-        return button
-        # return self.click(forgot_password_locators.show_password_button)
+        self.click(forgot_password_locators.show_password_button)
 
     @allure.step('Проверяем что поле пароля активно')
     def is_active_password_field(self):
