@@ -11,7 +11,6 @@ class ForgotPasswordPage(BasePage):
     @allure.step('Заполняем поля емейла')
     def input_email(self, email):
         email_field = self.find_element(forgot_password_locators.email_field)
-        print(email_field.text)
         email_field.send_keys(email)
 
     @allure.step('Кликаем кнопку восстановить пароль')

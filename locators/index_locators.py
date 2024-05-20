@@ -21,7 +21,7 @@ order_number = (By.XPATH, './/p[text()="идентификатор заказа"
 
 sauce_spicy = (By.XPATH, ".//div/ul/a/p[text()='Соус Spicy-X']/parent::a")
 
-basket_drop = (By.XPATH, './/section/ul')
+basket_drop = (By.XPATH, './/ul[contains(@class,"BurgerConstructor")]')
 
 burger_1_counter = (By.XPATH, ".//div/ul/a/p[text()='Флюоресцентная булка R2-D3']/parent::a/div/p[contains(@class,'counter')]")  # noqa
 

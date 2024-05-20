@@ -14,7 +14,7 @@ class ProfilePage(BasePage):
 
     @allure.step('проверка что адрес история заказов')
     def is_url_order_history(self):
-        expected_string = profile_locators.order_history_string
+        expected_string = 'order-history'
         self.wait_until_url_contains(expected_string)
 
         return expected_string in self.get_current_url()

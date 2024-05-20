@@ -4,4 +4,4 @@ total_counter = (By.XPATH, './/div/p[text()="Выполнено за все вр
 day_counter = (By.XPATH, './/div/p[text()="Выполнено за сегодня:"]/following-sibling::p')  # noqa
 
 first_order = (By.XPATH, './/h2[contains(text(), "бургер")]')
-order_popup = (By.XPATH, './/div/div/section[2]')
+order_popup = (By.XPATH, './/div[contains(@class,"Modal_orderBox__1xWdi")]')
